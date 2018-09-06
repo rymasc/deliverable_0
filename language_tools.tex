@@ -3,10 +3,19 @@
 \label{sec:language_tools}
 
 Several tools have been implemented at a programming language level in order to gain further insight from the developer about the application.
-Things such as tasks, priority and depedencies need to be worked out for the system to function properly.
+Things such as tasks, priority and dependencies need to be worked out for the system to function properly.
+Many of these tools use a checkpointing system to check if energy will be available available before a task begins.
+Eon was one of the first coordination based programming languages to add the concept of energy states on top of C \cite{eon}.
+This allowed the programmer to assign flows and set energy states for various tasks.
+Mementos \cite{mementos} adds energy checks at compile time and checkpointing and recovery occur at run time by itself because it is difficult to predict changing energy harvesting conditions.
+Chain \cite{chain} ditches the checkpointing model in favor of a task based model to eliminate the overhead of checkpointing.
 
+
+
+-Alpaca \cite{alpaca}
+
+
+Language
 
 - MayFly \cite{mayfly}
 - CleanCut   Clear Cut \cite{cleancut}
-- Eon \cite{eon}
-- Checkpoint stuffs...
