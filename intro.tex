@@ -6,7 +6,11 @@ The vision of the Internet of Things still hasn't come to fruition.
 Batteries are one of the largest obstacles to the Internet of Things \cite{intermittentAndAwesome}
 These batteries can be removed and power can instead be harvested from the environment.
 However, designing and implementing a batteryless device is not trivial.
-Three major challenges associated with implementing a batteryless devices are intermittent power loss, time-keeping and the ever changing energy harvesting environment.
-The main
+Some of the the major challenges associated with implementing a batteryless device include intermittent power loss, time-keeping and the ever changing energy harvesting environment.
 
-Techniques such as Ekho \cite{ekho} can be used to measure the energy currently being harvested.
+Intermittently powered devices require the developer to identify a power loss event before it occurs and make decisions to allow it to recover.
+The way the device recovers can often depend on the amount of time the device has lost power.
+For example, with devices that record data and periodically transmit, the device may chose to retransmit that data or chose not to if the data is stale.
+To accomplish this flexibility various language tools have been implemented to identify checkpoints and discern tasks.
+In addition some tools such as TARDIS \cite{tardis} and CUSTARD \cite{tardis} have been developed to maintain accurate timing for periods when the device loses power.
+Finally, techniques such as Ekho \cite{ekho} can be used to measure the energy currently being harvested.
